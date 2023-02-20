@@ -1,7 +1,5 @@
 defmodule ElixirPoker do
-  
-  def compare(player_1, player_2) do
+  def compare(white_hand, black_hand) do
     ""
   end
-  
 end
