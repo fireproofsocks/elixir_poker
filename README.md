@@ -4,11 +4,11 @@ This repo describes an Elixir coding challenge where the interviewee is tasked w
 
 ## Program Requirements
 
-Build a function which can determine the winner of a hand of poker between two players (designated as white and black). A hand has 5 cards.
+Build a function which can determine the winner of a hand of poker between two players (designated as Player 1 and Player 2). A hand has 5 cards.
 
 **Input**: accepts two strings representing a hand of cards, e.g. `2C 3H 4S 8C KH` and `QH QD 5S 7C 8D`
 
-**Output**: returns the winner (white or black), and optionally returns the reason for winning.
+**Output**: returns the winner (Player 1 or Player 2), and optionally returns the reason for winning.
 
 ## Game description
 
@@ -46,44 +46,44 @@ Poker combinations for this interview (by rank):
 
 ### Flush
 
-- Input: Black: `2H 7H 3H 5H JH`; White: `2C 3H 4S 8C KH`
-- Output: Black wins - flush: J
+- Input: Player 1: `2H 7H 3H 5H JH`; Player 2: `2C 3H 4S 8C KH`
+- Output: Player 1 wins - flush: J
 
-- Input: Black: `2H 7H 3H 5H JH`; White: `2C 3C 4C 8C KC`
-- Output: White wins - flush: K
+- Input: Player 1: `2H 7H 3H 5H JH`; Player 2: `2C 3C 4C 8C KC`
+- Output: Player 2 wins - flush: K
 
 ### Three of a Kind
 
-- Input: Black: `2H 2D 2S 5C 9D`; White: `2C 3H 4S 8C KH`
-- Output: Black wins - three of a kind: 2
+- Input: Player 1: `2H 2D 2S 5C 9D`; Player 2: `2C 3H 4S 8C KH`
+- Output: Player 1 wins - three of a kind: 2
 
-- Input: Black: `2H 2D 2S 5C 9D`; White: `2C 3H 4S 8C 8H`
-- Output: Black wins - three of a kind: 2
+- Input: Player 1: `2H 2D 2S 5C 9D`; Player 2: `2C 3H 4S 8C 8H`
+- Output: Player 1 wins - three of a kind: 2
 
-- Input: Black: `2H 2D 2S 5C 9D`; White: `2C 3H 8S 8C 8H`
-- Output: White wins - three of a kind: 8
+- Input: Player 1: `2H 2D 2S 5C 9D`; Player 2: `2C 3H 8S 8C 8H`
+- Output: Player 2 wins - three of a kind: 8
 
 ### Pair
 
-- Input: Black: `2H 3D 5S KC KD`; White: `2C 3H 4S 8C KH`
-- Output: Black wins - pair: King
+- Input: Player 1: `2H 3D 5S KC KD`; Player 2: `2C 3H 4S 8C KH`
+- Output: Player 1 wins - pair: King
 
-- Input: Black: `QH QD 5S 7C 8D`; White: `2C 3H 4S KC KH`
-- Output: White wins - pair: King
+- Input: Player 1: `QH QD 5S 7C 8D`; Player 2: `2C 3H 4S KC KH`
+- Output: Player 2 wins - pair: King
 
-- Input: Black: `KS KD 5S 7C 8D`; White: `2C 3H 4S KC KH`
-- Output: Black wins - High: 8
+- Input: Player 1: `KS KD 5S 7C 8D`; Player 2: `2C 3H 4S KC KH`
+- Output: Player 1 wins - High: 8
 
 ### High Cards
 
-- Input: Black: `2H 3D 5S 9C KD`; White: `2C 3H 4S 8C AH`
-- Output: White wins - high card: Ace
+- Input: Player 1: `2H 3D 5S 9C KD`; Player 2: `2C 3H 4S 8C AH`
+- Output: Player 2 wins - high card: Ace
 
-- Input: Black: `2H 3D 5S 9C AD`; White: `2C 3H 4S 8C AH`
-- Output: Black wins - high card: 9
+- Input: Player 1: `2H 3D 5S 9C AD`; Player 2: `2C 3H 4S 8C AH`
+- Output: Player 1 wins - high card: 9
 
-- Input: Black: `2H 3D 5S 9C AD`; White: `9H 3H 4S 8C AH`
-- Output: White wins - high card: 8
+- Input: Player 1: `2H 3D 5S 9C AD`; Player 2: `9H 3H 4S 8C AH`
+- Output: Player 2 wins - high card: 8
 
-- Input: Black: `2H 3D 5S 9C KD`; White: 2D `3H 5C 9S KH`
+- Input: Player 1: `2H 3D 5S 9C KD`; Player 2: 2D `3H 5C 9S KH`
 - Output: Tie
